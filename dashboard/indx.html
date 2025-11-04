@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert Bangladesh - Disaster Monitoring</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="last-update" id="lastUpdate">Last updated: Loading...</div>
+            <h1>Alert Bangladesh</h1>
+        </div>
+
+        <div class="main-content">
+            <div class="section-title">Current Conditions</div>
+            <div class="subtitle">Live data from IoT sensor network across the region.</div>
+
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <span class="metric-icon">🌡️</span>
+                      <div class="metric-value" id="temperature">--</div>
+                    <div class="metric-label">Temperature</div>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-icon">💧</span>
+                    <div class="metric-value" id="humidity">--</div>
+                    <div class="metric-label">Humidity</div>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-icon">🌊</span>
+                    <div class="metric-value" id="waterLevel">--</div>
+                    <div class="metric-label">Water Level</div>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-icon">🌱</span>
+                    <div class="metric-value" id="soilMoisture">--</div>
+                    <div class="metric-label">Soil Moisture</div>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-icon">⏲️</span>
+                    <div class="metric-value" id="pressure">--</div>
+                    <div class="metric-label">Pressure</div>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-icon">🌧️</span>
+                    <div class="metric-value" id="totalrain">--</div>
+                    <div class="metric-label">Total Rain</div>
+                </div>
+            </div>
+
+            <div class="section-title">Disaster Risk Analysis</div>
+            
+            <div class="risk-grid">
+                <div class="risk-card risk-thunderstorm">
+                    <div class="risk-header">
+                        <span class="risk-icon">⛈️</span>
+                        <span class="risk-title">Thunderstorm</span>
+                    </div>
+                    <div class="risk-level level-high" id="thunderstormLevel">High</div>
+                    <div class="risk-description" id="thunderstormDesc">
+                        High humidity, elevated temperature, and low atmospheric pressure create ideal conditions for severe thunderstorms.
+                    </div>
+                    <div class="risk-actions">
+                        <div class="actions-title">Suggested Actions</div>
+                        <div id="thunderSuggetion">
+                            Seek shelter immediately. Avoid open areas and tall objects. Unplug sensitive electronics.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="risk-card risk-drought">
+                    <div class="risk-header">
+                        <span class="risk-icon">☀️</span>
+                        <span class="risk-title">Drought</span>
+                    </div>
+                    <div class="risk-level level-low" id="droughtLevel">Low</div>
+                    <div class="risk-description" id="droughtDesc">
+                        Sufficient soil moisture and high humidity indicate no immediate drought risk.
+                    </div>
+                    <div class="risk-actions">
+                        <div class="actions-title">Suggested Actions</div>
+                        <div id="droughtSuggestion">
+                            Practice regular water conservation. Maintain and check water storage systems.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="risk-card risk-flood">
+                    <div class="risk-header">
+                        <span class="risk-icon">🌊</span>
+                        <span class="risk-title">Flood</span>
+                    </div>
+                    <div class="risk-level level-medium" id="floodLevel">Medium</div>
+                    <div class="risk-description" id="floodDesc">
+                        Elevated water levels could lead to localized flooding, especially in low-lying areas.
+                    </div>
+                    <div class="risk-actions">
+                        <div class="actions-title">Suggested Actions</div>
+                        <div id="floodSuggestion">
+                            Monitor alerts from local authorities. Ensure drainage systems are clear. Prepare an evacuation kit.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="risk-card risk-cyclone">
+                    <div class="risk-header">
+                        <span class="risk-icon">🌪️</span>
+                        <span class="risk-title">Cyclone</span>
+                    </div>
+                    <div class="risk-level level-critical" id="cycloneLevel">Critical</div>
+                    <div class="risk-description" id="cycloneDesc">
+                        A significant drop in atmospheric pressure indicates a potential cyclone formation.
+                    </div>
+                    <div class="risk-actions">
+                        <div class="actions-title">Suggested Actions</div>
+                        <div id="cycloneSuggestion">
+                            Evacuate immediately to designated safe zones. Follow all official instructions.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
